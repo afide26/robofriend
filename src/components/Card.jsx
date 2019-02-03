@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 
-class Card extends Component {
-  state = {};
-  render() {
-    return (
-      <div className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
-        <img src="https://robohash.org/alan?200x200" alt="robot-photo" />
-        <h2>Jane Doe</h2>
-        <p>jane.doe@gmail.com</p>
-      </div>
-    );
-  }
-}
+const Card = props => {
+  const { name, username, email, id } = props;
+  return (
+    <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
+      <img src={`https://robohash.org/${username}?200x200`} alt="robot-photo" />
+      <h2>{name}</h2>
+      <h3>{username}</h3>
+      <p>{email}</p>
+    </div>
+  );
+};
 
 export default Card;
