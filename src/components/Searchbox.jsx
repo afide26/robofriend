@@ -1,13 +1,20 @@
 import React from "react";
 
-const SearchBox = () => {
+const SearchBox = ({ onSearch, searchField }) => {
+  const inputStyle = {
+    width: "300px",
+    borderRadius: "10px"
+  };
   return (
-    <form>
-      <label htmlFor="robot">Robofriend search:</label>
+    <form className="pa2 tc">
+      <label htmlFor="robot">Robofriend search: </label>
       <input
+        className="pa3 ba b--green bg-lightest-blue tc"
         name="robot"
         type="text"
         placeholder="Search for your robofriend"
+        style={inputStyle}
+        onChange={onSearch}
       />
     </form>
   );
