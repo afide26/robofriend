@@ -1,8 +1,7 @@
 import React from "react";
-import { robots } from "../services/robots";
 import Card from "./Card";
 
-const CardList = () => {
+const CardList = ({ robots }) => {
   const robotsList = robots.map(robot => (
     <Card
       key={robot.id}

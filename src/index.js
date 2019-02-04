@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import CardList from "./components/CardList";
+import App from "./components/App";
 import "tachyons";
 
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <div>
-    <CardList />
+    <App />
   </div>,
   document.getElementById("root")
 );
