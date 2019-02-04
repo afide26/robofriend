@@ -24,8 +24,11 @@ class App extends Component {
   };
   render() {
     const { robots, searchField } = this.state;
-    const filteredRobots = robots.filter(robot =>
-      robot.name.toLowerCase().includes(searchField.toLowerCase())
+    const filteredRobots = robots.filter(
+      robot =>
+        robot.name.toLowerCase().includes(searchField.toLowerCase()) ||
+        robot.username.toLowerCase().includes(searchField.toLowerCase()) ||
+        robot.email.toLowerCase().includes(searchField.toLowerCase())
     );
     return (
       <React.Fragment>
