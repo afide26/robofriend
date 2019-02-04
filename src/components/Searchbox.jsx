@@ -7,7 +7,9 @@ const SearchBox = ({ onSearch, searchField }) => {
   };
   return (
     <form className="pa2 tc">
-      <label htmlFor="robot">Robofriend search: </label>
+      <label className="robot-search-label" htmlFor="robot">
+        Robofriend search:{" "}
+      </label>
       <input
         className="pa3 ba b--green bg-lightest-blue tc"
         name="robot"

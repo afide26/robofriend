@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'SEGA LOGO FONT';
+  font-style: normal;
+  font-weight: normal;
+  src: local('SEGA LOGO FONT'), url('./sega-logo-font-cufonfonts-webfont/SEGA.woff') format('woff');
+}
+
+.sega-title {
+  font-family: 'SEGA LOGO FONT';
+  letter-spacing: 5px;
+  font-weight: 200;
+  font-size: 5rem;
+  color: #0ccac4;
+}
+
+.robot-search-label {
+  font-size: 1rem;
+  color: #0ccac4;
+}

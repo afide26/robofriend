@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardList from "./CardList";
 import SearchBox from "./Searchbox";
 import { robots } from "../services/robots";
+import "../styles/App.css";
 
 class App extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class App extends Component {
     );
     return (
       <React.Fragment>
-        <h1 className="tc">Robofriends</h1>
+        <h1 className="tc sega-title">Robofriends</h1>
         <SearchBox
           onSearch={this.handleOnSearchChange}
           searchField={this.state.searchField}
