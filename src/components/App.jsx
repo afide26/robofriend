@@ -32,18 +32,22 @@ class App extends Component {
         robot.username.toLowerCase().includes(searchField.toLowerCase()) ||
         robot.email.toLowerCase().includes(searchField.toLowerCase())
     );
-    return (
-      <React.Fragment>
-        <h1 className="tc sega-title">Robofriends</h1>
-        <SearchBox
-          onSearch={this.handleOnSearchChange}
-          searchField={this.state.searchField}
-        />
-        <div className="tc">
-          <CardList robots={filteredRobots} searchField={searchField} />
-        </div>
-      </React.Fragment>
-    );
+    if (robots.length === 0) {
+      return <h1 className="tc sega-title">Robofriends</h1>;
+    } else {
+      return (
+        <React.Fragment>
+          <h1 className="tc sega-title">Robofriends</h1>
+          <SearchBox
+            onSearch={this.handleOnSearchChange}
+            searchField={this.state.searchField}
+          />
+          <div className="tc">
+            <CardList robots={filteredRobots} searchField={searchField} />
+          </div>
+        </React.Fragment>
+      );
+    }
   }
 }
 
