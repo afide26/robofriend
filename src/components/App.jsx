@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CardList from "./CardList";
 import SearchBox from "./Searchbox";
+import Scroll from "./Scroll";
 import "../styles/App.css";
 
 class App extends Component {
@@ -36,16 +37,16 @@ class App extends Component {
       return <h1 className="tc sega-title">Robofriends</h1>;
     } else {
       return (
-        <React.Fragment>
-          <h1 className="tc sega-title">Robofriends</h1>
+        <div className="tc">
+          <h1 className="sega-title">Robofriends</h1>
           <SearchBox
             onSearch={this.handleOnSearchChange}
             searchField={this.state.searchField}
           />
-          <div className="tc">
+          <Scroll>
             <CardList robots={filteredRobots} searchField={searchField} />
-          </div>
-        </React.Fragment>
+          </Scroll>
+        </div>
       );
     }
   }
