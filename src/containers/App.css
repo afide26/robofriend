@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'SEGA LOGO FONT';
+  font-style: normal;
+  font-weight: normal;
+  src: local('SEGA LOGO FONT'), url('./sega-logo-font-cufonfonts-webfont/SEGA.woff') format('woff');
+}
+
+.sega-title {
+  font-family: 'SEGA LOGO FONT';
+  letter-spacing: 5px;
+  font-weight: 200;
+  font-size: 5rem;
+  color: #0ccac4;
+}
+
+.robot-search-label {
+  font-size: 1rem;
+  color: #0ccac4;
+}
+
+input[type="text"] {
+  outline: none;
+}
+
+@media screen and (max-width:568px) and (min-width:375px) {
+  .sega-title {
+    font-family: 'SEGA LOGO FONT';
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 2.5rem;
+    color: #0ccac4;
+  }
+
+  input[type="text"] {
+    max-width: 200px !important;
+    padding: 10px;
+    font-size: .85rem;
+  }
+
+  .robot-search-label {
+    font-size: .85rem;
+    color: #0ccac4;
+  }
+}
