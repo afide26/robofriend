@@ -33,22 +33,20 @@ class App extends Component {
         robot.username.toLowerCase().includes(searchField.toLowerCase()) ||
         robot.email.toLowerCase().includes(searchField.toLowerCase())
     );
-    if (robots.length === 0) {
-      return <h1 className="tc sega-title">Robofriends</h1>;
-    } else {
-      return (
-        <div className="tc">
-          <h1 className="sega-title">Robofriends</h1>
-          <SearchBox
-            onSearch={this.handleOnSearchChange}
-            searchField={this.state.searchField}
-          />
-          <Scroll>
-            <CardList robots={filteredRobots} searchField={searchField} />
-          </Scroll>
-        </div>
-      );
-    }
+    return !robots.length === 0 ? (
+      <h1 className="tc sega-title">Loading...</h1>
+    ) : (
+      <div className="tc">
+        <h1 className="sega-title">Robofriends</h1>
+        <SearchBox
+          onSearch={this.handleOnSearchChange}
+          searchField={this.state.searchField}
+        />
+        <Scroll>
+          <CardList robots={filteredRobots} searchField={searchField} />
+        </Scroll>
+      </div>
+    );
   }
 }
 
